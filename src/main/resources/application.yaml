@@ -1,0 +1,16 @@
+spring:
+  main:
+    banner-mode: "OFF"
+
+server:
+  error:
+    include-message: ALWAYS
+
+feign:
+  client:
+    config:
+      covid19-api:
+        url: ${COVID_19_API_URL:https://api.covid19api.com}
+
+cache:
+  expire-after: PT30M
